@@ -21,10 +21,10 @@ conda activate ncbi_tools
 # ---------------------------------------------------------------------------- #
 # DIRECTORY PATHS
 # ---------------------------------------------------------------------------- #
-Elska_dir='/scratch/kcd88651/ticks/Dermacentor_Reticulatus/Elska/raw_reads'
-Louise_dir='/scratch/kcd88651/ticks/Dermacentor_Reticulatus/Louise/raw_reads'
-Penny_dir='/scratch/kcd88651/ticks/Dermacentor_Reticulatus/Penny/raw_reads'
-DretUK_dir='/scratch/kcd88651/ticks/Dermacentor_Reticulatus/DretUK/raw_reads'
+Elska_dir='/scratch/kcd88651/ticks/D_reticulatus/Elska/raw_reads'
+Louise_dir='/scratch/kcd88651/ticks/D_reticulatus/Louise/raw_reads'
+Penny_dir='/scratch/kcd88651/ticks/D_reticulatus/Penny/raw_reads'
+DretUK_dir='/scratch/kcd88651/ticks/D_reticulatus/DretUK/raw_reads'
 
 THREADS=16
 
