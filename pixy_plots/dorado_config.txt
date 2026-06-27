@@ -1,0 +1,5 @@
+Array_ID    dir fastqgz fastq   correct
+1   /scratch/kcd88651/ticks/D_reticulatus/Elska/dorado  /scratch/kcd88651/ticks/D_reticulatus/Elska/raw_reads/Elska_combined.fastq.gz   Elska_combined.fastq    Elska_corrected.fasta
+2   /scratch/kcd88651/ticks/D_reticulatus/Louise/dorado /scratch/kcd88651/ticks/D_reticulatus/Louise/raw_reads/Louise_combined.fastq.gz Louise_combined.fastq   Louise_corrected.fasta
+3   /scratch/kcd88651/ticks/D_reticulatus/Penny/dorado  /scratch/kcd88651/ticks/D_reticulatus/Penny/raw_reads/Penny_combined.fastq.gz   Penny_combined.fastq    Penny_corrected.fasta
+4   /scratch/kcd88651/ticks/D_reticulatus/DretUK/dorado /scratch/kcd88651/ticks/D_reticulatus/DretUK/raw_reads/DretUK_combined.fastq.gz DretUK_combined.fastq   DretUK_corrected.fasta
