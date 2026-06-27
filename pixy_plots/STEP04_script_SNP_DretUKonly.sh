@@ -33,6 +33,7 @@ chr=$(awk -v id=$SLURM_ARRAY_TASK_ID '$1==id {print $2}' "$config")
 # ---------------------------------------------------------------------------- #
 # VARIANT CALLING - DRETUK REFERENCE
 # ---------------------------------------------------------------------------- #
+conda activate snp_env
 cd "$wd"
 
 # make chromosome directories
@@ -47,3 +48,5 @@ bcftools mpileup --threads 32 -f "$DretUK_a" $wd/DretUK.DretUK.sorted.bam -r "$c
     | bcftools call --threads 32 -m -O z -a GQ -o chr${numb}.DretUKonly.vcf.gz
 
 echo "Done: chr${numb}.DretUKonly.vcf.gz"
+
+conda deactivate
