@@ -10,7 +10,7 @@
 #SBATCH --error=%x_%j.err
 #SBATCH --mail-user=kcd88651@uga.edu
 #SBATCH --mail-type=BEGIN,END,FAIL,ARRAY_TASKS
-#SBATCH --array=1-8
+#SBATCH --array=1-9
 
 # ---------------------------------------------------------------------------- #
 # CREATE CONDA ENVIRONMENTS
