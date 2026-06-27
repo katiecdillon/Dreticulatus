@@ -12,11 +12,11 @@
 #SBATCH --mail-type=BEGIN,END,FAIL
 
 # ---------------------------------------------------------------------------- #
-# CREATE CONDA ENVIRONMENT
+# CREATE CONDA ENVIRONMENTS
 # ---------------------------------------------------------------------------- #
 source ~/.bashrc
-conda create -n ncbi_tools -c bioconda entrez-direct sra-tools -y
-conda activate ncbi_tools
+conda create -n ncbi_tools_env -c bioconda entrez-direct=25.3 sra-tools=3.4.1 -y
+conda create -n nanoplot_env -c bioconda nanoplot=1.46.2 -y
 
 # ---------------------------------------------------------------------------- #
 # DIRECTORY PATHS
@@ -31,6 +31,8 @@ THREADS=16
 # ---------------------------------------------------------------------------- #
 # DOWNLOAD, CONVERT, CONCATENATE, AND COMPRESS FOR ELSKA, LOUISE, AND PENNY
 # ---------------------------------------------------------------------------- #
+conda activate ncbi_tools_env
+
 for i in Elska Louise Penny
 do
     dir_var="${i}_dir"
@@ -61,11 +63,11 @@ do
 
     # Compress
     echo "Compressing FASTQ files for ${i}..."
-    pigz -p $THREADS "$sample_dir/${i}_combined.fastq"
+    gzip "$sample_dir/${i}_combined.fastq"
 
     # Cleanup
     echo "Cleaning up intermediate files for ${i}..."
-    find "$sample_dir" -name "*.fastq" -not -name "${i}_combined.fastq.gz" -delete
+    find "$sample_dir" -name "*.fastq" -delete
 
     echo "Done with ${i}! Final files:"
     ls -lh "$sample_dir/${i}_combined.fastq.gz"
@@ -99,13 +101,30 @@ cat "$DretUK_dir"/*.fastq > "$DretUK_dir/DretUK_combined.fastq"
 
 # Compress
 echo "Compressing FASTQ files for DretUK..."
-pigz -p $THREADS "$DretUK_dir/DretUK_combined.fastq"
+gzip "$DretUK_dir/DretUK_combined.fastq"
 
 # Cleanup
 echo "Cleaning up intermediate files for DretUK..."
-find "$DretUK_dir" -name "*.fastq" -not -name "DretUK_combined.fastq.gz" -delete
+find "$DretUK_dir" -name "*.fastq" -delete
 
 echo "Done with DretUK! Final files:"
 ls -lh "$DretUK_dir/DretUK_combined.fastq.gz"
+
+conda deactivate
+
+# ---------------------------------------------------------------------------- #
+# NANOPLOT QC
+# ---------------------------------------------------------------------------- #
+conda activate nanoplot_env
+
+for i in Elska Louise Penny DretUK
+do
+    dir_var="${i}_dir"
+    sample_dir="${!dir_var}"
+
+    cd "$sample_dir"
+
+    NanoPlot --fastq "${i}_combined.fastq.gz" --info_in_report --N50 --outdir "nanoplot_raw_${i}"
+done
 
 conda deactivate
