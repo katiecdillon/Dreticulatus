@@ -22,7 +22,7 @@ wd='/scratch/kcd88651/ticks/D_reticulatus'
 # ---------------------------------------------------------------------------- #
 # FILE PATHS
 # ---------------------------------------------------------------------------- #
-config=$wd/config_dorado.txt
+config=$wd/STEP02_config_dorado.txt
 
 dir=$(awk -v Array_ID=$SLURM_ARRAY_TASK_ID '$1==Array_ID {print $2}' $config)
 fastqgz=$(awk -v Array_ID=$SLURM_ARRAY_TASK_ID '$1==Array_ID {print $3}' $config)
