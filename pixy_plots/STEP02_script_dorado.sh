@@ -43,3 +43,15 @@ gunzip -c "$fastqgz" > "$fastq"
 
 # Run 'dorado correct' for Elska, Louise, Penny, and DretUK
 dorado correct --threads 64 "$fastq" > "$correct"
+
+module unload dorado/2.0.0-foss-2024a-CUDA-12.6.0
+
+# ---------------------------------------------------------------------------- #
+# NANOPLOT QC
+# ---------------------------------------------------------------------------- #
+source ~/.bashrc
+conda activate nanoplot_env
+
+NanoPlot --fasta "$correct" --info_in_report --N50 --outdir "$dir/nanoplot_dorado"
+
+conda deactivate
