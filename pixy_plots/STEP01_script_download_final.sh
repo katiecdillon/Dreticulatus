@@ -15,16 +15,19 @@
 # CREATE CONDA ENVIRONMENTS
 # ---------------------------------------------------------------------------- #
 source ~/.bashrc
+
 conda create -n ncbi_tools_env -c bioconda entrez-direct=25.3 sra-tools=3.4.1 -y
 conda create -n nanoplot_env -c bioconda nanoplot=1.46.2 -y
 
 # ---------------------------------------------------------------------------- #
 # DIRECTORY PATHS
 # ---------------------------------------------------------------------------- #
-Elska_dir='/scratch/kcd88651/ticks/D_reticulatus/Elska/raw_reads'
-Louise_dir='/scratch/kcd88651/ticks/D_reticulatus/Louise/raw_reads'
-Penny_dir='/scratch/kcd88651/ticks/D_reticulatus/Penny/raw_reads'
-DretUK_dir='/scratch/kcd88651/ticks/D_reticulatus/DretUK/raw_reads'
+wd='/scratch/kcd88651/ticks/D_reticulatus'
+
+Elska_dir="${wd}/Elska/raw_reads"
+Louise_dir="${wd}/Louise/raw_reads"
+Penny_dir="${wd}/Penny/raw_reads"
+DretUK_dir="${wd}/DretUK/raw_reads"
 
 THREADS=16
 
@@ -128,3 +131,19 @@ do
 done
 
 conda deactivate
+
+# ---------------------------------------------------------------------------- #
+# DOWNLOAD ASSEMBLIES
+# ---------------------------------------------------------------------------- #
+## These assemblies will be needed in STEP 03
+Elska_url='https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/051/549/975/GCA_051549975.1_ASM5154997v1/GCA_051549975.1_ASM5154997v1_genomic.fna.gz'
+Louise_url='https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/051/549/955/GCA_051549955.1_ASM5154995v1/GCA_051549955.1_ASM5154995v1_genomic.fna.gz'
+Penny_url='https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/051/550/115/GCA_051550115.1_ASM5155011v1/GCA_051550115.1_ASM5155011v1_genomic.fna.gz'
+DretUK_url='https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/057/332/255/GCA_057332255.1_DR_Devon_UK_G_1.2/GCA_057332255.1_DR_Devon_UK_G_1.2_genomic.fna.gz'
+
+for i in Elska Louise Penny DretUK
+do
+    url_var="${i}_url"
+    url="${!url_var}"
+    curl -s "$url" | gunzip -c > "${wd}/${i}/${i}_assembly.fna"
+done
