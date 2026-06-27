@@ -7,3 +7,4 @@ Array_ID	dir	assembly	raw	header	ref
 6	/scratch/kcd88651/ticks/D_reticulatus/pixy/Louise_ref	/scratch/kcd88651/ticks/D_reticulatus/Louise/Louise_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/DretUK/dorado/DretUK_corrected.fasta	DretUK	LouiseREF
 7	/scratch/kcd88651/ticks/D_reticulatus/pixy/Louise_only	/scratch/kcd88651/ticks/D_reticulatus/Louise/Louise_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Louise/dorado/Louise_corrected.fasta	Louise	LouiseONLY
 8	/scratch/kcd88651/ticks/D_reticulatus/pixy/DretUK_only	/scratch/kcd88651/ticks/D_reticulatus/DretUK/DretUK_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/DretUK/dorado/DretUK_corrected.fasta	DretUK	DretUKonly
+9	/scratch/kcd88651/ticks/D_reticulatus/pixy/DretUK_ref	/scratch/kcd88651/ticks/D_reticulatus/DretUK/DretUK_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Louise/dorado/Louise_assembly.fna	LouiseFNA	DretUKfna
