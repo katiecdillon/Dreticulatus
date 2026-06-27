@@ -1,0 +1,12 @@
+Array_ID    chr 
+1   CM170536.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 1, whole genome shotgun sequence
+2   CM170537.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 2, whole genome shotgun sequence
+3   CM170538.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 3, whole genome shotgun sequence
+4   CM170539.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 4, whole genome shotgun sequence
+5   CM170540.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 5, whole genome shotgun sequence
+6   CM170541.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 6, whole genome shotgun sequence
+7   CM170542.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 7, whole genome shotgun sequence
+8   CM170543.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 8, whole genome shotgun sequence
+9   CM170544.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 9, whole genome shotgun sequence
+10  CM170545.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 10, whole genome shotgun sequence
+11  CM170546.1 Dermacentor reticulatus isolate DR_UK_Guided_2025 chromosome 11, whole genome shotgun sequence
