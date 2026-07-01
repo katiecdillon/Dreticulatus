@@ -45,7 +45,7 @@ done
 
 # make a list of bam files
 if [[ -f LouiseREF.bamlist.txt ]]; then rm LouiseREF.bamlist.txt; fi ## avoid adding to list twice
-for i in Elska Penny DretUK
+for i in Elska Louise Penny DretUK
 do
     echo "$i.Louise.sorted.bam" >> LouiseREF.bamlist.txt
 done
