@@ -3,7 +3,7 @@
 #SBATCH --partition=iob_p
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=64
-#SBATCH --mem=900gb
+#SBATCH --mem=200gb
 #SBATCH --export=NONE
 #SBATCH --time=10-00:00:00
 #SBATCH --output=%x_%j.out
@@ -44,7 +44,7 @@ done
 
 # make a list of bam files
 if [[ -f DretUKref.bamlist.txt ]]; then rm DretUKref.bamlist.txt; fi ## avoid adding to list twice
-for i in Elska Louise Penny
+for i in Elska Louise Penny DretUK
 do
     echo "$i.DretUK.sorted.bam" >> DretUKref.bamlist.txt
 done
