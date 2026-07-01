@@ -4,7 +4,7 @@ Array_ID	dir	assembly	raw	header	ref
 3	/scratch/kcd88651/ticks/D_reticulatus/pixy/DretUK_ref	/scratch/kcd88651/ticks/D_reticulatus/DretUK/DretUK_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Penny/dorado/Penny_corrected.fasta	Penny	DretUKref
 4	/scratch/kcd88651/ticks/D_reticulatus/pixy/DretUK_ref	/scratch/kcd88651/ticks/D_reticulatus/DretUK/DretUK_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/DretUK/dorado/DretUK_corrected.fasta	DretUK	DretUKref
 5	/scratch/kcd88651/ticks/D_reticulatus/pixy/Louise_ref	/scratch/kcd88651/ticks/D_reticulatus/Louise/Louise_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Elska/dorado/Elska_corrected.fasta	Elska	LouiseREF
-6	/scratch/kcd88651/ticks/D_reticulatus/pixy/Louise_ref	/scratch/kcd88651/ticks/D_reticulatus/Louise/Louise_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Louise/dorado/Penny_corrected.fasta	Louise	LouiseREF
+6	/scratch/kcd88651/ticks/D_reticulatus/pixy/Louise_ref	/scratch/kcd88651/ticks/D_reticulatus/Louise/Louise_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Louise/dorado/Louise_corrected.fasta	Louise	LouiseREF
 7	/scratch/kcd88651/ticks/D_reticulatus/pixy/Louise_ref	/scratch/kcd88651/ticks/D_reticulatus/Louise/Louise_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Penny/dorado/Penny_corrected.fasta	Penny	LouiseREF
 8	/scratch/kcd88651/ticks/D_reticulatus/pixy/Louise_ref	/scratch/kcd88651/ticks/D_reticulatus/Louise/Louise_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/DretUK/dorado/DretUK_corrected.fasta	DretUK	LouiseREF
 9	/scratch/kcd88651/ticks/D_reticulatus/pixy/DretUK_ref	/scratch/kcd88651/ticks/D_reticulatus/DretUK/DretUK_assembly.fna	/scratch/kcd88651/ticks/D_reticulatus/Louise/dorado/Louise_assembly.fna	LouiseFNA	DretUKfna
