@@ -13,50 +13,6 @@
 
 ml BCFtools/1.23.1-GCC-13.3.0 R/4.5.1-gfbf-2025a
 
-# cd /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_merge
-# for i in {1..11}
-# do
-#     mkdir chr${i}
-# done
-
-# cd /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_ref
-# for i in {1..11}
-# do
-#     cd chr${i}
-#     cp chr${i}.Louise.vcf.gz /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_merge/chr${i}
-#     cd ..
-# done
-
-# cd /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_only
-# for i in {1..11}
-# do
-#     cd chr${i}
-#     cp chr${i}.LouiseONLY.vcf.gz /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_merge/chr${i}
-#     cd ..
-# done
-
-# cd /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_merge
-# echo "Louise.Louise.sorted.bam" > /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_merge/new_sample_name.txt
-# for i in {1..11}
-# do
-#     cd chr${i}
-#     bcftools reheader \
-#         -s /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_merge/new_sample_name.txt \
-#         chr${i}.LouiseONLY.vcf.gz \
-#         -o chr${i}.LouiseONLY_renamed.vcf.gz
-#     cd ..
-# done
-
-# cd /scratch/kcd88651/ticks/Dermacentor_Reticulatus/pixy/Louise_merge
-# for i in {1..11}
-# do
-#     cd chr${i}
-#     bcftools index --csi -f "chr${i}.Louise.vcf.gz"
-#     bcftools index --csi -f chr${i}.LouiseONLY_renamed.vcf.gz
-#     bcftools merge --threads 32 chr${i}.Louise.vcf.gz chr${i}.LouiseONLY_renamed.vcf.gz -O z -o chr${i}.Louisemerge.vcf.gz
-#     cd ..
-# done
-
 Louise_wd='/scratch/kcd88651/ticks/D_reticulatus/pixy/LouiseREF'
 DretUK_wd='/scratch/kcd88651/ticks/D_reticulatus/pixy/DretUKref'
 
